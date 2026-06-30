@@ -40,21 +40,31 @@ let box2 = document.querySelector(".box2");
 
 let navbar = document.querySelector("#navbar");
 let navbarH2 = document.querySelector("#navbar h2");
-let RightNavbar = document.querySelector("#navbar .right-nav");
+let RightNavbar = document.querySelectorAll("#navbar .right-nav h3");
 
 // gsap.to(navbar,{
 //     backgroundColor:"red"
 // })
 
-gsap.from(navbarH2,{
-    y:-100,
-    delay:1,
-    duration:1,
-    stagger:1
-})
-gsap.from(RightNavbar,{
-    y:-100,
-    delay:1,
-    duration:1,
-    stagger:1
-})
+gsap.from(navbarH2, {
+  y: -100,
+  delay: 1,
+  duration: 0.5,
+  stagger: 0.1,
+});
+gsap.from(RightNavbar, {
+  y: -100,
+  delay: 1,
+  duration: 2,
+  stagger: 0.1,
+});
+
+let page2 = document.querySelector(".page2 ");
+let page2H1 = document.querySelector(".page2 h1");
+
+gsap.to(page2, {
+  scrollTrigger: {
+    trigger: page2,
+    start:"top 0%"
+  },
+});
