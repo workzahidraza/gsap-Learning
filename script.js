@@ -60,11 +60,27 @@ gsap.from(RightNavbar, {
 });
 
 let page2 = document.querySelector(".page2 ");
-let page2H1 = document.querySelector(".page2 h1");
+let page2H1 = document.querySelector(".page2 .content-moving");
 
-gsap.to(page2, {
+// gsap.from(page2H1, {
+//   x: "50%",
+//   y:"20%",
+//   duration: 1,
+//   scrollTrigger: {
+//     trigger: page2H1,
+//     start: "top 10%",
+//     end: "bottom 10%",
+//     markers: true,
+//   },
+// });
+gsap.to(page2H1, {
+  x: "-100%",
   scrollTrigger: {
-    trigger: page2,
-    start:"top 0%"
+    trigger: ".content-moving",
+    markers: true,
+    start: "0% 50%",
+    end:"75% 50%",
+ 
+    scrub: 3,
   },
 });
