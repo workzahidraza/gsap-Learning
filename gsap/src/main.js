@@ -82,3 +82,58 @@ import CustomEase from "gsap/CustomEase";
 //     from: "edges",
 //   },
 // });
+
+const loderContainer = document.querySelector(".loding-content");
+const loder = document.querySelector(".loder h1");
+const img = document.querySelector(".img");
+const textH1 = document.querySelector(".text-content h1");
+const textH2 = document.querySelector(".text-content h2");
+let count = 0;
+
+const interval = setInterval(() => {
+  count++;
+  loder.innerHTML = `${count}%`;
+  if (count === 100) {
+    clearInterval(interval);
+    afterloading();
+  }
+}, 20);
+
+function afterloading() {
+  const tl = gsap.timeline();
+
+  tl.to(loderContainer, {
+    yPercent: -100,
+    duration: 2,
+    ease: "power1.out",
+  })
+    .to(
+      ".img-wrapper",
+      {
+        scale: 1.15,
+        duration: 0.3,
+        ease: "power1.in",
+      },
+      "-=0.9",
+    )
+    .from(
+      textH1,
+      {
+        opacity: 0,
+        duration: 0.7,
+        y: "100%",
+        ease: "power1.in",
+      },
+      "zah",
+    )
+    .from(
+      textH2,
+      {
+        opacity: 0,
+        duration: 0.7,
+        y: "100%",
+        ease: "power1.in",
+      },
+      "zah",
+    );
+}
