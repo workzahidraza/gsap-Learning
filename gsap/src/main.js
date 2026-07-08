@@ -36,39 +36,49 @@ import CustomEase from "gsap/CustomEase";
 //   },
 // });
 
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
 
 // < , -=0.2  +=0.2, labels = "any random words"
 
-tl.to(
-  ".box1",
-  {
-    x: 500,
-    duration: 0.9,
-  },
-  "zahid",
-)
-  .to(
-    ".box2",
-    {
-      x: 500,
-      duration: 0.9,
-    },
-    "zah",
-  )
-  .to(
-    ".box3",
-    {
-      x: 500,
-      duration: 0.9,
-    },
-    "zahid",
-  )
-  .to(
-    ".box4",
-    {
-      x: 500,
-      duration: 0.9,
-    },
-    "zah",
-  );
+// tl.to(
+//   ".box1",
+//   {
+//     x: 500,
+//     duration: 0.9,
+//   },
+//   "zahid",
+// )
+//   .to(
+//     ".box2",
+//     {
+//       x: 500,
+//       duration: 0.9,
+//     },
+//     "zah",
+//   )
+//   .to(
+//     ".box3",
+//     {
+//       x: 500,
+//       duration: 0.9,
+//     },
+//     "zahid",
+//   )
+//   .to(
+//     ".box4",
+//     {
+//       x: 500,
+//       duration: 0.9,
+//     },
+//     "zah",
+//   );
+
+// gsap.from(".content span", {
+//   yPercent: 100,
+//   duration: 0.5,
+//   ease: "power1.out",
+//   stagger: {
+//     amount: 0.2,
+//     from: "edges",
+//   },
+// });

@@ -11,6 +11,7 @@ main {
   width: 100%;
   background-color: black;
   overflow: hidden;
+  color: aliceblue;
 }
 /* .box1 {
   background-color: wheat;
@@ -44,31 +45,45 @@ button {
   transform: translate(-50%, -50%); 
 } */
 
+/* 
 .box1 {
   background-color: wheat;
   height: 200px;
   width: 200px;
   margin-bottom: 0.5rem;
-  /* margin: 10px; */
+  
 }
 .box2 {
   background-color: wheat;
   height: 200px;
   width: 200px;
   margin-bottom: 0.5rem;
-  /* margin: 10px; */
+  
 }
 .box3 {
   background-color: wheat;
   height: 200px;
   width: 200px;
   margin-bottom: 0.5rem;
-  /* margin: 10px; */
+  
 }
 .box4 {
   background-color: wheat;
   height: 200px;
   width: 200px;
   margin-bottom: 0.5rem;
-  /* margin: 10px; */
+  
+} */
+
+/* .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.content span {
+  font-size: 8rem;
+  font-weight: 700;
+  display: inline-block;
+} */
