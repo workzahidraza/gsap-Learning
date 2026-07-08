@@ -12,16 +12,16 @@ main {
   background-color: black;
   overflow: hidden;
 }
-.box1 {
+/* .box1 {
   background-color: wheat;
-  height: 100px;
-  width: 100vw;
+  height: 200px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-self: start;
-  /* margin: 10px; */
-}
-.box1 h1 {
+  /* margin: 10px; 
+}*/
+/* .box1 h1 {
   font-weight: 500;
   font-size: 7rem;
 }
@@ -41,5 +41,34 @@ button {
   top: 50%;
   left: 50%;
   border-radius: 2rem;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+} */
+
+.box1 {
+  background-color: wheat;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+  /* margin: 10px; */
+}
+.box2 {
+  background-color: wheat;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+  /* margin: 10px; */
+}
+.box3 {
+  background-color: wheat;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+  /* margin: 10px; */
+}
+.box4 {
+  background-color: wheat;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+  /* margin: 10px; */
 }
