@@ -89,8 +89,8 @@ button {
 
 /* .img-container {
   position: relative;
-} */
-.loding-content {
+/* } */
+/* .loding-content {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -101,8 +101,8 @@ button {
   position: absolute;
   inset: 0;
   z-index: 5;
-}
-
+} */
+/* 
 .loding-content .loder h1 {
   font-size: 4rem;
 }
@@ -118,8 +118,8 @@ button {
 .img-wrapper {
   height: 100%;
   width: 100%;
-  overflow: hidden;
-}
+  overflow: hidden; */
+/* }
 .img-container img {
   height: 100%;
   width: 100%;
@@ -130,8 +130,8 @@ button {
 }
 
 .text-content {
-  position: absolute;
-  inset: 0;
+  position: absolute; */
+/* inset: 0;
 
   height: 100vh;
   width: 100%;
@@ -147,7 +147,63 @@ button {
   color: rgb(62, 61, 61);
 }
 .text-content h2 {
-  font-size: 2rem;
+  font-size: 2rem; 
   font-weight: 500;
   color: rgb(242, 242, 110);
+} */
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
+
+.box1 {
+  background-color: rgb(216, 201, 173);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+.box2 {
+  background-color: rgb(128, 99, 45);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+.box3 {
+  background-color: wheat;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+.box4 {
+  background-color: rgb(207, 170, 101);
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+#play {
+  background-color: #e0d4d4;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+#pause {
+  background-color: #e0d4d4;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+#resume {
+  background-color: #e0d4d4;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+#reverse {
+  background-color: #e0d4d4;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+#seek {
+  background-color: #e0d4d4;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
 }

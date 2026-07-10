@@ -83,64 +83,101 @@ import CustomEase from "gsap/CustomEase";
 //   },
 // });
 
-const loderContainer = document.querySelector(".loding-content");
-const loder = document.querySelector(".loder h1");
-const img = document.querySelector(".img");
-const textH1 = document.querySelector(".text-content h1");
-const textH2 = document.querySelector(".text-content h2");
-const loaderContainer = document.querySelector(".loading-content");
-const loader = document.querySelector(".loader h1");
+// const loderContainer = document.querySelector(".loding-content");
+// const loder = document.querySelector(".loder h1");
+// const img = document.querySelector(".img");
+// const textH1 = document.querySelector(".text-content h1");
+// const textH2 = document.querySelector(".text-content h2");
 
-const text = {
-  h1: document.querySelector(".text-content h1"),
-  h2: document.querySelector(".text-content h2"),
-};
-let count = 0;
+// const loaderContainer = document.querySelector(".loading-content");
+// const loader = document.querySelector(".loader h1");
 
-const interval = setInterval(() => {
-  count++;
-  loder.innerHTML = `${count}%`;
-  if (count === 100) {
-    clearInterval(interval);
-    afterloading();
-  }
-}, 20);
+// const text = {
+//   h1: document.querySelector(".text-content h1"),
+//   h2: document.querySelector(".text-content h2"),
+// };
+// let count = 0;
 
-function afterloading() {
-  const tl = gsap.timeline();
+// const interval = setInterval(() => {
+//   count++;
+//   loder.innerHTML = `${count}%`;
+//   if (count === 100) {
+//     clearInterval(interval);
+//     afterloading();
+//   }
+// }, 20);
 
-  tl.to(loderContainer, {
-    yPercent: -100,
-    duration: 2,
-    ease: "power1.out",
-  })
-    .to(
-      ".img-wrapper",
-      {
-        scale: 1.15,
-        duration: 0.3,
-        ease: "power1.in",
-      },
-      "-=0.9",
-    )
-    .from(
-      textH1,
-      {
-        opacity: 0,
-        duration: 0.7,
-        y: "100%",
-        ease: "power1.in",
-      },
-      "zah",
-    )
-    .from(
-      textH2,
-      {
-        opacity: 0,
-        duration: 0.7,
-        y: "100%",
-        ease: "power1.in",
-      },
-      "zah",
-    );
-}
+// function afterloading() {
+//   const tl = gsap.timeline();
+
+//   tl.to(loderContainer, {
+//     yPercent: -100,
+//     duration: 2,
+//     ease: "power1.out",
+//   })
+//     .to(
+//       ".img-wrapper",
+//       {
+//         scale: 1.15,
+//         duration: 0.3,
+//         ease: "power1.in",
+//       },
+//       "-=0.9",
+//     )
+//     .from(
+//       textH1,
+//       {
+//         opacity: 0,
+//         duration: 0.7,
+//         y: "100%",
+//         ease: "power1.in",
+//       },
+//       "zah",
+//     )
+//     .from(
+//       textH2,
+//       {
+//         opacity: 0,
+//         duration: 0.7,
+//         y: "100%",
+//         ease: "power1.in",
+//       },
+//       "zah",
+//     );
+// }
+
+const play = document.querySelector("#play");
+const pause = document.querySelector("#pause");
+const resume = document.querySelector("#resume");
+const reverse = document.querySelector("#reverse");
+const seek = document.querySelector("#seek");
+
+const boxes = document.querySelectorAll(".box");
+
+const tl = gsap.timeline();
+
+tl.to(boxes, {
+  x: "50vw",
+  duration: 1,
+
+  stagger: 1,
+});
+
+play.addEventListener("click", () => {
+  tl.play();
+});
+pause.addEventListener("click", () => {
+  tl.pause();
+});
+
+resume.addEventListener("click", () => {
+  tl.resume();
+});
+
+reverse.addEventListener("click", () => {
+  tl.reverse();
+});
+
+seek.addEventListener("click", () => {
+  tl.seek(1); // Jump to 1 second
+});
