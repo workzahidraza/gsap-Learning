@@ -88,6 +88,13 @@ const loder = document.querySelector(".loder h1");
 const img = document.querySelector(".img");
 const textH1 = document.querySelector(".text-content h1");
 const textH2 = document.querySelector(".text-content h2");
+const loaderContainer = document.querySelector(".loading-content");
+const loader = document.querySelector(".loader h1");
+
+const text = {
+  h1: document.querySelector(".text-content h1"),
+  h2: document.querySelector(".text-content h2"),
+};
 let count = 0;
 
 const interval = setInterval(() => {
