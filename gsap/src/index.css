@@ -207,3 +207,33 @@ main {
   padding: 1rem 2rem;
   border-radius: 2rem;
 }
+
+.imgDiv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+  transform-origin: center;
+  /* scale: 0.3; */
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* word-wrap: break-word; */
+}
+.text-content h1 {
+  color: white;
+}

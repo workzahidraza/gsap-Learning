@@ -154,7 +154,7 @@ const seek = document.querySelector("#seek");
 
 const boxes = document.querySelectorAll(".box");
 
-const tl = gsap.timeline();
+// const tl = gsap.timeline();
 
 tl.to(boxes, {
   x: "50vw",
@@ -180,4 +180,24 @@ reverse.addEventListener("click", () => {
 
 seek.addEventListener("click", () => {
   tl.seek(1); // Jump to 1 second
+});
+
+const imgDiv = document.querySelector(".imgDiv .img");
+const textContent = document.querySelector(".text-content");
+const main = document.querySelector("main");
+
+const tl = gsap.timeline();
+
+// tl.set(imgDiv,{
+//   scale:0.3
+// })
+// tl.to(imgDiv,{
+//   scale:1,
+//   duration: 1.5,
+//   ease: "power3.out",
+// })
+gsap.from(".imgDiv img", {
+  scale: 0.3,
+  duration: 1.5,
+  ease: "power3.out",
 });
