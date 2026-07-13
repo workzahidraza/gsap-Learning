@@ -232,3 +232,60 @@ window.addEventListener("load", () => {
       "-=0.6"
     );
 });
+
+import gsap from "gsap";
+
+const tl = gsap.timeline();
+
+// Image zoom
+tl.from(".imgDiv img",{
+    scale:1.6,
+    duration:2,
+    ease:"power3.out"
+})
+
+// Dark overlay fade
+.from(".overlay",{
+    opacity:0,
+    duration:1
+},"<")
+
+// Main title
+.from(".text-content h1 span",{
+    y:180,
+    duration:1,
+    ease:"power4.out"
+},"-=1.2")
+
+// Subtitle
+.from(".text-content h2 span",{
+    y:120,
+    opacity:0,
+    duration:1,
+    ease:"power4.out"
+},"-=0.7")
+
+// Paragraph
+.from(".text-content p",{
+    opacity:0,
+    y:30,
+    duration:.8
+},"-=0.5")
+
+// Button
+.from("button",{
+    opacity:0,
+    y:40,
+    scale:.8,
+    duration:.8,
+    ease:"back.out(1.7)"
+},"-=0.5")
+
+// Floating image effect
+.to(".imgDiv img",{
+    scale:1.1,
+    duration:8,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
