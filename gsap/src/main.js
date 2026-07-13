@@ -201,3 +201,34 @@ gsap.from(".imgDiv img", {
   duration: 1.5,
   ease: "power3.out",
 });
+
+
+import gsap from "gsap";
+
+window.addEventListener("load", () => {
+  const tl = gsap.timeline();
+
+  tl.from(".imgDiv img", {
+    scale: 0.3,
+    duration: 1.5,
+    ease: "power3.out",
+  })
+    .from(
+      ".text-content h1",
+      {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "-=0.8"
+    )
+    .from(
+      ".text-content h2",
+      {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "-=0.6"
+    );
+});
