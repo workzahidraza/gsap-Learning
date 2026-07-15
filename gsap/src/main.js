@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import CustomEase from "gsap/CustomEase";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.set(".box1 h1", {
 //     x:"-100vw"
 // });
@@ -146,146 +146,58 @@ import CustomEase from "gsap/CustomEase";
 //     );
 // }
 
-const play = document.querySelector("#play");
-const pause = document.querySelector("#pause");
-const resume = document.querySelector("#resume");
-const reverse = document.querySelector("#reverse");
-const seek = document.querySelector("#seek");
+// const play = document.querySelector("#play");
+// const pause = document.querySelector("#pause");
+// const resume = document.querySelector("#resume");
+// const reverse = document.querySelector("#reverse");
+// const seek = document.querySelector("#seek");
 
-const boxes = document.querySelectorAll(".box");
+// const boxes = document.querySelectorAll(".box");
 
-// const tl = gsap.timeline();
+// // const tl = gsap.timeline();
 
-tl.to(boxes, {
-  x: "50vw",
-  duration: 1,
+// tl.to(boxes, {
+//   x: "50vw",
+//   duration: 1,
 
-  stagger: 1,
-});
+//   stagger: 1,
+// });
 
-play.addEventListener("click", () => {
-  tl.play();
-});
-pause.addEventListener("click", () => {
-  tl.pause();
-});
+// play.addEventListener("click", () => {
+//   tl.play();
+// });
+// pause.addEventListener("click", () => {
+//   tl.pause();
+// });
 
-resume.addEventListener("click", () => {
-  tl.resume();
-});
+// resume.addEventListener("click", () => {
+//   tl.resume();
+// });
 
-reverse.addEventListener("click", () => {
-  tl.reverse();
-});
+// reverse.addEventListener("click", () => {
+//   tl.reverse();
+// });
 
-seek.addEventListener("click", () => {
-  tl.seek(1); // Jump to 1 second
-});
-
-const imgDiv = document.querySelector(".imgDiv .img");
+// seek.addEventListener("click", () => {
+//   tl.seek(1); // Jump to 1 second
+// });
+gsap.registerPlugin(ScrollTrigger);
+const imgDiv = document.querySelector(" .img");
 const textContent = document.querySelector(".text-content");
 const main = document.querySelector("main");
 
 const tl = gsap.timeline();
 
-// tl.set(imgDiv,{
-//   scale:0.3
-// })
-// tl.to(imgDiv,{
-//   scale:1,
-//   duration: 1.5,
-//   ease: "power3.out",
-// })
-gsap.from(".imgDiv img", {
-  scale: 0.3,
-  duration: 1.5,
-  ease: "power3.out",
-});
-
-
-import gsap from "gsap";
-
-window.addEventListener("load", () => {
-  const tl = gsap.timeline();
-
-  tl.from(".imgDiv img", {
-    scale: 0.3,
-    duration: 1.5,
-    ease: "power3.out",
-  })
-    .from(
-      ".text-content h1",
-      {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-      },
-      "-=0.8"
-    )
-    .from(
-      ".text-content h2",
-      {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-      },
-      "-=0.6"
-    );
-});
-
-import gsap from "gsap";
-
-const tl = gsap.timeline();
-
-// Image zoom
-tl.from(".imgDiv img",{
-    scale:1.6,
-    duration:2,
-    ease:"power3.out"
-})
-
-// Dark overlay fade
-.from(".overlay",{
-    opacity:0,
-    duration:1
-},"<")
-
-// Main title
-.from(".text-content h1 span",{
-    y:180,
-    duration:1,
-    ease:"power4.out"
-},"-=1.2")
-
-// Subtitle
-.from(".text-content h2 span",{
-    y:120,
-    opacity:0,
-    duration:1,
-    ease:"power4.out"
-},"-=0.7")
-
-// Paragraph
-.from(".text-content p",{
-    opacity:0,
-    y:30,
-    duration:.8
-},"-=0.5")
-
-// Button
-.from("button",{
-    opacity:0,
-    y:40,
-    scale:.8,
-    duration:.8,
-    ease:"back.out(1.7)"
-},"-=0.5")
-
-// Floating image effect
-.to(".imgDiv img",{
-    scale:1.1,
-    duration:8,
-    repeat:-1,
-    yoyo:true,
-    ease:"sine.inOut"
+gsap.to(".img", {
+  borderRadius: 0,
+  scale: 1,
+  ease: "none",
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".imgDiv",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    markers: true,
+  },
 });

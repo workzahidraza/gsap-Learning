@@ -5,12 +5,18 @@
 }
 
 html,
-body,
-main {
+body {
   height: 100%;
   width: 100%;
-
-  overflow: hidden;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+main {
+  background-color: #000000;
+}
+@font-face {
+  font-family: play;
+  src: url(./fonts/PlaywriteNZ-Regular.ttf);
 }
 /* .box1 {
   background-color: wheat;
@@ -152,12 +158,12 @@ button {
   color: rgb(242, 242, 110);
 } */
 
-main {
+/* main {
   height: 100%;
   width: 100%;
   background-color: #000000;
-}
-
+} */
+/* 
 .box1 {
   background-color: rgb(216, 201, 173);
   height: 200px;
@@ -206,34 +212,54 @@ main {
   background-color: #e0d4d4;
   padding: 1rem 2rem;
   border-radius: 2rem;
-}
+} */
 
 .imgDiv {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
+  /* transform: scale(0.2); */
 }
-.imgDiv img {
+.img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;
-  object-position: center;
-  transform-origin: center;
-  /* scale: 0.3; */
+  /* object-position: center; */
+  transform-origin: center center;
+  transform: scale(0.2);
+  opacity: 0;
+  border-radius: 2rem;
 }
 
 .text-content {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  gap: 50rem;
+  width: 100%; */
   /* word-wrap: break-word; */
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  pointer-events: none;
 }
 .text-content h1 {
   color: white;
+  font-family: play;
+  font-size: 4rem;
+}
+.spacer {
+  height: 100vh;
+}
+.page2 {
+  height: 100vh;
+  width: 100vh;
 }
