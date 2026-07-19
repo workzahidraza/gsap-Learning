@@ -1,23 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-
-  /* overflow: hidden; */
-}
-main {
-  background-color: #000000;
-}
-@font-face {
-  font-family: play;
-  src: url(./fonts/PlaywriteNZ-Regular.ttf);
-}
 /* .box1 {
   background-color: wheat;
   height: 200px;
@@ -272,3 +253,43 @@ button {
   height: 100vh;
   width: 100vh;
 } */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  /* overflow: hidden; */
+}
+.main {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+}
+@font-face {
+  font-family: play;
+  src: url(./fonts/PlaywriteNZ-Regular.ttf);
+}
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+.img-div {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+.img-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position:center;
+ 
+  
+}
