@@ -1,5 +1,3 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.set(".box1 h1", {
 //     x:"-100vw"
 // });
@@ -181,23 +179,46 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // seek.addEventListener("click", () => {
 //   tl.seek(1); // Jump to 1 second
 // });
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-const imgDiv = document.querySelector(" .img");
-const textContent = document.querySelector(".text-content");
-const main = document.querySelector("main");
+// const imgDiv = document.querySelector(" .img");
+// const textContent = document.querySelector(".text-content");
+// const main = document.querySelector("main");
 
+// const tl = gsap.timeline();
+
+// gsap.to(".img", {
+//   borderRadius: 0,
+//   scale: 1,
+//   ease: "none",
+//   opacity: 1,
+//   scrollTrigger: {
+//     trigger: ".imgDiv",
+//     start: "top top",
+//     end: "bottom top",
+//     scrub: true,
+//     markers: true,
+//   },
+// });
+
+const img = document.querySelector("img");
+const imgDiv = document.querySelector(".img-div img");
+const page1 = document.querySelector(".page1");
 const tl = gsap.timeline();
 
-gsap.to(".img", {
-  borderRadius: 0,
+tl.to(img, {
   scale: 1,
-  ease: "none",
+  duration: 0.9,
+  ease: "power4.in",
   opacity: 1,
   scrollTrigger: {
-    trigger: ".imgDiv",
-    start: "top top",
+    trigger: page1,
     end: "bottom top",
-    scrub: true,
+    scrub: 5,
     markers: true,
+    amount: 0.2,
+    start: "top top",
+    pin: true,
   },
 });
